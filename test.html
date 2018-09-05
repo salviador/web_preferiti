@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>WEBSITE</title>
+
+    <script language="javascript" type="text/javascript" src="jquery-3.3.1.min.js"></script>
+
+
+    <!--https://proto.io/freebies/onoff/-->
+
+    <style>
+        body {
+        margin:0
+        }
+        #fullheight {
+        height:100%
+        }
+        form {
+        margin:0;
+        padding:0;
+        display:inline
+        }
+        .bgtable {
+        background:#dadada;
+        filter:alpha(opacity=85);
+        -moz-opacity:.85;
+        opacity:.85
+        }
+        .message {
+        border:1px solid red;
+        margin:10px;
+        padding:7px;
+        background-color:#eaeaea;
+        font-family:Arial;
+        font-size:14pt
+        }
+        .errortitle {
+        font-family:Arial;
+        font-weight:;
+        color:#eaeaea;
+        font-size:0
+        }
+        .errormess {
+        font-family:Arial;
+        font-weight:700;
+        font-style:normal;
+        color:#ca0002;
+        font-size:.75em
+        }
+        a.navlink:visited {
+        color:blue;
+        font-family:arial;
+        font-size:12pt;
+        font-weight:700;
+        text-decoration:none
+        }
+        a.navlink:link {
+        color:blue;
+        font-family:arial;
+        font-size:12pt;
+        font-weight:700;
+        text-decoration:none
+        }
+        a.navlink:hover {
+        color:blue;
+        font-family:arial;
+        font-size:12pt;
+        font-weight:700;
+        text-decoration:none
+        }
+        a.navlink:active {
+        color:blue;
+        font-family:arial;
+        font-size:12pt;
+        font-weight:700;
+        text-decoration:none
+        }
+        a.footerlink:visited {
+        color:grey;
+        font-family:arial;
+        font-size:10pt;
+        font-weight:400;
+        text-decoration:none
+        }
+        a.footerlink:link {
+        color:grey;
+        font-family:arial;
+        font-size:10pt;
+        font-weight:400;
+        text-decoration:none
+        }
+        a.footerlink:hover {
+        color:grey;
+        font-family:arial;
+        font-size:10pt;
+        font-weight:400;
+        text-decoration:none
+        }
+        a.footerlink:active {
+        color:grey;
+        font-family:arial;
+        font-size:10pt;
+        font-weight:400;
+        text-decoration:none
+        }
+        .footertxt {
+        font-family:Arial;
+        color:#555;
+        float:right;
+        font-size:14px;
+        text-align:right
+        }
+        .infoheader {
+        font-family:Arial;
+        color:red;
+        font-size:14pt
+        }
+        .infosubheader {
+        font-family:Arial;
+        color:#000;
+        font-size:12pt;
+        font-weight:700
+        }
+        .infotxt {
+        font-family:Arial;
+        color:#222;
+        font-size:12pt;
+        font-weight:400
+        }
+        .fld1 {
+        font-family:Arial;
+        color:#222;
+        font-size:.7em;
+        font-weight:700;
+        text-align:right;
+        vertical-align:top
+        }
+        .note1 {
+        font-family:Arial;
+        color:red;
+        font-size:.7em;
+        font-weight:400;
+        text-align:left
+        }
+        .note2 {
+        width:600px;
+        font-family:Arial;
+        color:#00f;
+        font-size:.7em;
+        font-weight:400;
+        text-align:center
+        }
+        .smbtn {
+        color:#222;
+        background-color:#eee;
+        font-family:Arial;
+        font-weight:400;
+        font-size:.6em
+        }
+        .medbtn {
+        color:#222;
+        background-color:#eee;
+        font-family:Arial;
+        font-weight:400;
+        font-size:.8em
+        }
+        .topicbox {
+        display:inline;
+        height:25px;
+        vertical-align:middle;
+        margin:5px 8px;
+        text-transform:lowercase
+        }
+        .topiclink:visited,.topiclink:link {
+        font:700 12pt Arial;
+        cursor:pointer;
+        color:#00f;
+        text-decoration:none;
+        line-height:25px
+        }
+        .topiclink:active {
+        font:700 12pt Arial;
+        cursor:pointer;
+        color:#00f;
+        text-decoration:none;
+        line-height:25px;
+        text-decoration:underline
+        }
+        .topiclink:hover {
+        font:700 12pt Arial;
+        color:#fff;
+        background-color:blue;
+        cursor:pointer;
+        text-decoration:none;
+        line-height:25px
+        }
+        .topiclink_hover {
+        font:700 10pt Arial;
+        color:#fff;
+        background-color:blue;
+        cursor:pointer;
+        text-decoration:none
+        }
+        .websitelink {
+        font:700 10pt Arial;
+        cursor:pointer;
+        color:blue;
+        text-decoration:none;
+        padding:4px;
+        white-space:nowrap;
+        line-height:2.4
+        }
+        .websitelink:hover {
+        color:red
+        }
+        .websitemain {
+        text-align:center;
+        width:760px
+        }
+        .websitebox {
+        height:25px;
+        width:auto;
+        margin:5px 10px;
+        padding:0
+        }
+        .websitebox a span {
+        top:5px
+        }
+        .searchbox {
+        font-family:arial;
+        font-size:18pt;
+        padding-left:3px
+        }
+
+        .websitebox{
+            height: 25px;
+            width: auto;
+            margin: 5px 10px;
+            padding: 0;           
+        }
+    </style>
+
+    <script>
+    </script>
+
+
+</head>
+<body onload="javascript:start();">
+
+    <td width="100%" valign="top" height="500" align="center">
+        <table class="bgtable" width="100%" cellspacing="0" cellpadding="0">
+        <tbody><tr>
+        <td>
+        <br>
+        <div align="center">
+        
+        <table style="background-color:#fff;" width="700" cellspacing="0" cellpadding="0">
+        <tbody>
+        <tr>
+        <td width="20" valign="top" height="20" align="left">&nbsp;</td>
+        <td colspan="1" valign="top" align="center">
+        <table width="100%" cellspacing="0" cellpadding="0">
+        <tbody>
+        <tr>
+        <td valign="middle" height="50" align="center">
+        <div id="formboxid"><form method="get" action="" id="frmid"><span style="color: red; font-family: arial; font-size: 13pt; font-weight: bold;"><input size="42" maxlength="150" name="QUERY1" id="QUERY1" class="searchbox" value="" onkeypress="return noEnter(event);" type="text">&nbsp;&nbsp;</span></form></div>
+        <div id="airfareformboxid" style="display:none;">
+        </div>
+        </td>
+        </tr>
+        <tr height="30">
+        <td class="websitemain" width="760" valign="center" align="center">
+
+            <span class="websitebox" id="site0" style="display: inline;"><a href="https://www.google.it/" target="_blank" class="websitelink"><img src="images/1250224.gif" width="16" height="16" border="0"> iGoogle</a> </span>
+            <span class="websitebox" id="site1" style="display: inline;"><a href="https://groups.yahoo.com/neo/groups/VNWA/info" target="_blank" class="websitelink"><img src="images/1250321.gif" width="16" height="16" border="0"> VNWA : DG8SAQ VNWA Users Group - VNA Design</a> </span>
+            <span class="websitebox" id="site2" style="display: inline;"><a href="https://www.youtube.com/" target="_blank" class="websitelink"><img src="images/1250210.png" width="16" height="16" border="0"> YouTube - YouTube di mancio92M</a> </span>
+            <span class="websitebox" id="site3" style="display: inline;"><a href="http://www.wolframalpha.com/" target="_blank" class="websitelink"><img src="images/1340456.gif" width="16" height="16" border="0"> Wolfram|Alpha: Computational Knowledge Engine</a> </span>
+            <span class="websitebox" id="site4" style="display: inline;"><a href="http://www.microchip.com/" target="_blank" class="websitelink"><img src="images/1921482.gif" width="16" height="16" border="0"> Microchip Technology Inc. is a Leading Provider of Microcontroller ...</a> </span>
+            <span class="websitebox" id="site5" style="display: inline;"><a href="https://www.ebay.it/" target="_blank" class="websitelink"><img src="images/1253237.gif" width="16" height="16" border="0"> eBay Italia - Aste online e shopping a prezzo fisso</a> </span>
+            <span class="websitebox" id="site6" style="display: inline;"><a href="https://www.investireoggi.it/forums/threads/r-i-c-o-m-i-n-c-i-a-m-o.87912/page-23" target="_blank" class="websitelink"><img src="images/4657377.gif" width="16" height="16" border="0"> R I C O M I N C I A M O ? | Pagina 23 | Forum di Investireoggi</a> </span>
+            <span class="websitebox" id="site7" style="display: inline;"><a href="https://www.investireoggi.it/forums/threads/new-ts-indice-ftsmib-5609-punti-in-2-mesi.53325/page-599" target="_blank" class="websitelink"><img src="images/1627255.gif" width="16" height="16" border="0"> New !!!! Ts indice ftsmib 5609 punti in 2 mesi - Pagina 599 - I Forum di Investi</a> </span>
+            <span class="websitebox" id="site8" style="display: inline;"><a href="https://www.investireoggi.it/forums/threads/il-prudente.2583/page-89" target="_blank" class="websitelink"><img src="images/3940253.gif" width="16" height="16" border="0"> "Il prudente" - Pagina 89 - I Forum di Investireoggi</a> </span>
+            <span class="websitebox" id="site9" style="display: inline;"><a href="https://translate.google.com/" target="_blank" class="websitelink"><img src="images/1265070.gif" width="16" height="16" border="0"> Strumenti per le lingue</a> </span>
+            <span class="websitebox" id="site10" style="display: inline;"><a href="https://www.sparkfun.com/" target="_blank" class="websitelink"><img src="images/1654676.gif" width="16" height="16" border="0"> News - SparkFun Electronics</a> </span>
+            <span class="websitebox" id="site11" style="display: inline;"><a href="http://www.lescienze.it/" target="_blank" class="websitelink"><img src="images/1340791.gif" width="16" height="16" border="0"> Homepage | Le Scienze</a> </span>
+            <span class="websitebox" id="site14" style="display: inline;"><a href="http://www.upcomingtechnology.org/" target="_blank" class="websitelink"><img src="images/2266737.gif" width="16" height="16" border="0"> Upcoming Technology | Tech News, Gaming, Software, Web 2.0, Reviews</a> </span>
+            <span class="websitebox" id="site15" style="display: inline;"><a href="http://www.lucadentella.it/" target="_blank" class="websitelink"><img src="images/0.gif" width="16" height="16" border="0"> lucadentella.it</a> </span>
+            <span class="websitebox" id="site16" style="display: inline;"><a href="https://brainwagon.org/" target="_blank" class="websitelink"><img src="images/2417722.gif" width="16" height="16" border="0"> brainwagon</a> </span>
+            <span class="websitebox" id="site19" style="display: inline;"><a href="http://www.falstad.com/circuit/" target="_blank" class="websitelink"><img src="images/2473420.gif" width="16" height="16" border="0"> Circuit Simulator Applet</a> </span>
+            <span class="websitebox" id="site21" style="display: inline;"><a href="http://radiobuilder.blogspot.com/" target="_blank" class="websitelink"><img src="images/2501977.gif" width="16" height="16" border="0"> THE RADIO BUILDER</a> </span>
+            <span class="websitebox" id="site22" style="display: inline;"><a href="http://192.168.0.1/start.htm" target="_blank" class="websitelink"><img src="images/2800151.gif.png" width="16" height="16" border="0">192.168.0.1</a> </span>
+            <span class="websitebox" id="site24" style="display: inline;"><a href="https://www.elsevier.com/books-and-journals/newnes" target="_blank" class="websitelink"><img src="images/2943945.gif.png" width="16" height="16" border="0"> Newnes | Elsevier | Store</a> </span>
+            <span class="websitebox" id="site30" style="display: inline;"><a href="http://www.eevblog.com/forum/" target="_blank" class="websitelink"><img src="images/4664786.gif" width="16" height="16" border="0"> EEVblog Electronics Community Forum - Index</a> </span>
+            <span class="websitebox" id="site31" style="display: inline;"><a href="http://codeandlife.com/" target="_blank" class="websitelink" ><img src="images/3212096.gif" width="16" height="16" border="0"> Code and Life</a> </span>
+            <span class="websitebox" id="site32" style="display: inline;"><a href="http://www.emcu.eu/" target="_blank" class="websitelink" ><img src="images/emcu.png" width="16" height="16" border="0"> www.emcu.eu</a> </span>
+            <span class="websitebox" id="site33" style="display: inline;"><a href="https://www.netvibes.com/dashboard" target="_blank" class="websitelink"><img src="images/3450106.gif.png" width="16" height="16" border="0"> Netvibes (1284)</a> </span>
+            <span class="websitebox" id="site35" style="display: inline;"><a href="http://mancinimichele.altervista.org/sensorall.php" target="_blank" class="websitelink"><img src="images/3760804.gif" width="16" height="16" border="0"> Sensor All</a> </span>
+            <span class="websitebox" id="site36" style="display: inline;"><a href="http://mancinimichele.altervista.org/iot_temp_last.php" target="_blank" class="websitelink"><img src="images/4673650.gif" width="16" height="16" border="0"> Sensor Last</a> </span>
+            <span class="websitebox" id="site37" style="display: inline;"><a href="http://mancinimichele.altervista.org/wifiall.php" target="_blank" class="websitelink"><img src="images/3760825.gif" width="16" height="16" border="0"> Wifi All</a> </span>
+            <span class="websitebox" id="site38" style="display: inline;"><a href="http://ardupilot.org/" target="_blank" class="websitelink"><img src="images/3784850.gif" width="16" height="16" border="0"> ArduCopter | Multirotor UAV</a> </span>
+            <span class="websitebox" id="site39" style="display: inline;"><a href="http://torrentz.eu/" target="_blank" class="websitelink" ><img src="images/1910046.gif" width="16" height="16" border="0"> Torrent Search Engine</a> </span>
+            <span class="websitebox" id="site40" style="display: inline;"><a href="https://mcuoneclipse.com/" target="_blank" class="websitelink"><img src="images/3825188.gif.png" width="16" height="16" border="0"> MCU on Eclipse | Everything on CodeWarrior, Microcontrollers and Eclipse</a> </span>
+            <span class="websitebox" id="site41" style="display: inline;"><a href="https://www.circuitsathome.com/" target="_blank" class="websitelink"><img src="images/3826428.gif" width="16" height="16" border="0"> Circuits@Home</a> </span>
+            <span class="websitebox" id="site42" style="display: inline;"><a href="http://pingbin.com/" target="_blank" class="websitelink"><img src="images/3826796.gif" width="16" height="16" border="0"> PingBin</a> </span>
+            <span class="websitebox" id="site43" style="display: inline;"><a href="https://tronixstuff.com/"target="_blank" class="websitelink"><img src="images/3846490.gif.png" width="16" height="16" border="0"> t r o n i x s t u f f</a> </span>
+            <span class="websitebox" id="site45" style="display: inline;"><a href="http://www.rctimer.com/" target="_blank" class="websitelink"><img src="images/3923486.gif" width="16" height="16" border="0"> Airframe - RCTimer RC Plane Car MultiRotor APM and MultiWii Carbon Fiber Propell</a> </span>
+            <span class="websitebox" id="site46" style="display: inline;"><a href="http://www.mauroalfieri.it/"target="_blank" class="websitelink"><img src="images/3935775.gif" width="16" height="16" border="0"> Mauro Alfieri - appunti, tutorial e altro ... sui miei interessi</a> </span>
+            <span class="websitebox" id="site48" style="display: inline;"><a href="https://cboard.cprogramming.com/c-programming/"target="_blank" class="websitelink"><img src="images/3940376.gif" width="16" height="16" border="0"> C Programming</a> </span>
+            <span class="websitebox" id="site49" style="display: inline;"><a href="https://learn.adafruit.com/" target="_blank" class="websitelink" ><img src="images/3941374.gif" width="16" height="16" border="0"> Adafruit Learning System</a> </span>
+            <span class="websitebox" id="site50" style="display: inline;"><a href="https://www.ebay.it/" target="_blank" class="websitelink"><img src="images/4518648.gif" width="16" height="16" border="0"> eBay | Tecnologia, moda, fai da te: prodotti nuovi a prezzo fisso</a> </span>
+            <span class="websitebox" id="site51" style="display: inline;"><a href="https://www.raspberrypi.org/magpi/" target="_blank" class="websitelink"><img src="images/3953571.gif" width="16" height="16" border="0"> The MagPi</a> </span>
+            <span class="websitebox" id="site52" style="display: inline;"><a href="https://www.foxtechfpv.com/" target="_blank" class="websitelink"><img src="images/3964726.gif.png" width="16" height="16" border="0"> FOXTECH FPV SYSTEM</a> </span>
+            <span class="websitebox" id="site54" style="display: inline;"><a href="https://wetransfer.com/" target="_blank" class="websitelink"><img src="images/3974529.gif.png" width="16" height="16" border="0"> WeTransfer</a> </span>
+            <span class="websitebox" id="site55" style="display: inline;"><a href="http://www.mjlorton.com/" target="_blank" class="websitelink"><img src="images/4001150.gif.png" width="16" height="16" border="0">mjlorton</a> </span>
+            <span class="websitebox" id="site56" style="display: inline;"><a href="https://www.vice.com/it" target="_blank" class="websitelink"><img src="images/4018088.gif" width="16" height="16" border="0"> VICE | Italia | La guida definitiva all'informazione illuminante</a> </span>
+            <span class="websitebox" id="site57" style="display: inline;"><a href="https://oshpark.com/" target="_blank" class="websitelink" ><img src="images/4024643.gif" width="16" height="16" border="0"> OSH Park ~ PCB Order - Upload your design</a> </span>
+            <span class="websitebox" id="site58" style="display: inline;"><a href="http://myactivities-mazen.blogspot.com/" target="_blank" class="websitelink" ><img src="images/4030832.gif" width="16" height="16" border="0"> Android - My Activities</a> </span>
+            <span class="websitebox" id="site59" style="display: inline;"><a href="http://vedder.se/" target="_blank" class="websitelink" ><img src="images/4035352.gif" width="16" height="16" border="0"> Benjamin's robotics | A site about some of my projects, some tutorials and anyth</a> </span>
+            <span class="websitebox" id="site61" style="display: inline;"><a href="http://jdesbonnet.blogspot.com/" target="_blank" class="websitelink" ><img src="images/4045819.gif" width="16" height="16" border="0"> Random Tech Stuff</a> </span>
+            <span class="websitebox" id="site62" style="display: inline;"><a href="https://www.die.net/" target="_blank" class="websitelink" ><img src="images/4059032.gif" width="16" height="16" border="0"> Linux site news</a> </span>
+            <span class="websitebox" id="site63" style="display: inline;"><a href="https://it.emcelettronica.com/" target="_blank" class="websitelink" ><img src="images/4062627.gif" width="16" height="16" border="0"> ELETTRONICA OPEN SOURCE | News ed Articoli Tecnici di Elettronica e Tecnologia</a> </span>
+            <span class="websitebox" id="site64" style="display: inline;"><a href="http://andybrown.me.uk/" target="_blank" class="websitelink" ><img src="images/4077186.gif" width="16" height="16" border="0"> Andys Workshop | Hardware Development</a> </span>
+            <span class="websitebox" id="site65" style="display: inline;"><a href="http://www.aosabook.org/en/index.html" target="_blank" class="websitelink" ><img src="images/website-icons-md5/system/0.gif" width="16" height="16" border="0"> The Architecture of Open Source Applications</a> </span>
+            <span class="websitebox" id="site66" style="display: inline;"><a href="https://www.testequity.com/" target="_blank" class="websitelink" ><img src="images/4109444.gif" width="16" height="16" border="0"> New and Used Test Equipment, Environmental Chambers, Test Equipment Rental and L</a> <div></div></span>
+            <span class="websitebox" id="site67" style="display: inline;"><a href="https://teampython.wordpress.com/" target="_blank" class="websitelink" ><img src="images/4132267.gif" width="16" height="16" border="0"> Team Python | Learn to program in Python</a> </span>
+            <span class="websitebox" id="site68" style="display: inline;"><a href="https://www.learncpp.com/" target="_blank" class="websitelink" ><img src="images/4138163.gif" width="16" height="16" border="0"> Learn C++</a> </span>
+            <span class="websitebox" id="site69" style="display: inline;"><a href="http://rubines.blogspot.com/" target="_blank" class="websitelink" ><img src="images/4144533.gif" width="16" height="16" border="0"> Rubi's World of embedded Electronics</a> </span>
+            <span class="websitebox" id="site70" style="display: inline;"><a href="https://www.apress.com/it" target="_blank" class="websitelink" ><img src="images/4155803.gif" width="16" height="16" border="0"> Apress</a> </span>
+            <span class="websitebox" id="site71" style="display: inline;"><a href="http://fabioangeletti.altervista.org/blog/?doing_wp_cron=1536068326.5567998886108398437500" target="_blank" class="websitelink" ><img src="images/4168465.gif" width="16" height="16" border="0"> Fabio's blog about electronics</a> </span>
+            <span class="websitebox" id="site72" style="display: inline;"><a href="http://www.housedillon.com/" target="_blank" class="websitelink" ><img src="images/website-icons-md5/system/0.gif" width="16" height="16" border="0"> House Dillon</a> </span>
+            <span class="websitebox" id="site73" style="display: inline;"><a href="http://kodfilemon.blogspot.com/" target="_blank" class="websitelink" ><img src="images/4185971.gif" width="16" height="16" border="0"> Kod Filemon</a> </span>
+            <span class="websitebox" id="site74" style="display: inline;"><a href="http://openschemes.com/" target="_blank" class="websitelink" ><img src="images/website-icons-md5/system/0.gif" width="16" height="16" border="0"> Openschemes | Projects, Gadgets, DIY, and More</a> </span>
+            <span class="websitebox" id="site75" style="display: inline;"><a href="https://www.batterfly.com" target="_blank" class="websitelink" ><img src="images/4258970.gif" width="16" height="16" border="0"> batterfly.com</a> </span>
+            <span class="websitebox" id="site76" style="display: inline;"><a href="http://iowahills.com/Index.html" target="_blank" class="websitelink" ><img src="images/4248586.gif" width="16" height="16" border="0">  Digital and Analog Filters  </a> </span>
+            <span class="websitebox" id="site77" style="display: inline;"><a href="https://www.aimtti.com/" target="_blank" class="websitelink" ><img src="images/atten.ico" width="16" height="16" border="0"> Aim-TTi is Aim Instruments and Thurlby Thandar Instruments</a> </span>
+            <span class="websitebox" id="site78" style="display: inline;"><a href="https://easyeda.com/" target="_blank" class="websitelink" ><img src="images/4260251.gif" width="16" height="16" border="0"> easyeda </a> </span>
+            <span class="websitebox" id="site79" style="display: inline;"><a href="http://impulsidiborsa.blogspot.com/" target="_blank" class="websitelink" ><img src="images/4266277.gif" width="16" height="16" border="0"> Impulsi di borsa</a> </span>
+            <span class="websitebox" id="site82" style="display: inline;"><a href="https://www.jann.cc/index.html#" target="_blank" class="websitelink" ><img src="images/4313272.gif" width="16" height="16" border="0"> Linux, programming, hacking, electronics, Python… These are the things I love. </a> </span>
+            <span class="websitebox" id="site83" style="display: inline;"><a href="https://www.tutorialspoint.com/index.htm" target="_blank" class="websitelink" ><img src="images/4313925.gif" width="16" height="16" border="0"> TUTORIAL Programming</a> </span>
+            <span class="websitebox" id="site86" style="display: inline;"><a href="https://www.overclockers.co.uk/" target="_blank" class="websitelink" ><img src="images/overclock.gif" width="16" height="16" border="0"> Overclockers UK - Computer components, hardware &amp; gaming PC</a> </span>
+            <span class="websitebox" id="site87" style="display: inline;"><a href="https://www.alternate.it/html/index.html" target="_blank" class="websitelink" ><img src="images/4345051.gif" width="16" height="16" border="0"> ALTERNATE</a> </span>
+            <span class="websitebox" id="site88" style="display: inline;"><a href="https://www.hrw.it" target="_blank" class="websitelink" ><img src="images/4345178.gif" width="16" height="16" border="0"> HRW.it - Hard Disk, Processori , Schede Video, Schede Madri, Memorie Ram</a> </span>
+            <span class="websitebox" id="site89" style="display: inline;"><a href="http://www.drako.it/drako_catalog/index.php" target="_blank" class="websitelink" ><img src="images/Drako.jpg" width="16" height="16" border="0"> Drako.it - Extreme modding</a> </span>
+            <span class="websitebox" id="site90" style="display: inline;"><a href="https://en.wikibooks.org/wiki/Python_Programming/Extending_with_C" target="_blank" class="websitelink" ><img src="images/4345843.gif" width="16" height="16" border="0"> Python Programming/Extending with C - Wikibooks, open books for an open world</a> </span>
+            <span class="websitebox" id="site92" style="display: inline;"><a href="https://www.newegg.com/global/it" target="_blank" class="websitelink" ><img src="images/4363037.gif" width="16" height="16" border="0"> Computer Parts, Laptops, Electronics, and More - Newegg.com!</a> </span>
+            <span class="websitebox" id="site94" style="display: inline;"><a href="http://it-ebooks.info/" target="_blank" class="websitelink" ><img src="images/4367062.gif" width="16" height="16" border="0"> IT eBooks - Free Download - Big Library</a> </span>
+            <span class="websitebox" id="site95" style="display: inline;"><a href="https://www.commandlinefu.com/commands/browse" target="_blank" class="websitelink" ><img src="images/4370587.gif" width="16" height="16" border="0"> All commands | commandlinefu.com</a> </span>
+            <span class="websitebox" id="site97" style="display: inline;"><a href="https://www.settorezero.com/wordpress/" target="_blank" class="websitelink" ><img src="images/website-icons-md5/system/0.gif" width="16" height="16" border="0"> Settorezero</a> </span>
+            <span class="websitebox" id="site99" style="display: inline;"><a href="https://www.bunniestudios.com/blog/" target="_blank" class="websitelink" ><img src="images/4411893.gif" width="16" height="16" border="0"> bunnie's blog</a> </span>
+            <span class="websitebox" id="site101" style="display: inline;"><a href="http://everycircuit.com/" target="_blank" class="websitelink" ><img src="images/4413653.gif" width="16" height="16" border="0"> EveryCircuit</a> </span>
+            <span class="websitebox" id="site102" style="display: inline;"><a href="https://store.digilentinc.com/" target="_blank" class="websitelink" ><img src="images/4422963.gif" width="16" height="16" border="0"> Digilent Inc. - Digital Design Engineer's Source</a> </span>
+            <span class="websitebox" id="site103" style="display: inline;"><a href="https://www.batronix.com/shop/index.html" target="_blank" class="websitelink" ><img src="images/4433875.gif" width="16" height="16" border="0"> Batronix - Programmer, Adapter, Measurement &amp; Test, ICs and more...</a> </span>
+            <span class="websitebox" id="site104" style="display: inline;"><a href="http://www.kerrywong.com/" target="_blank" class="websitelink" ><img src="images/website-icons-md5/system/0.gif" width="16" height="16" border="0"> Kerry D. Wong</a> </span>
+            <span class="websitebox" id="site105" style="display: inline;"><a href="https://www.radio-electronics.com/" target="_blank" class="websitelink" ><img src="images/4442772.gif" width="16" height="16" border="0"> Radio-Electronics.com: resources, analysis &amp; news for electronics engineers</a> </span>
+            <span class="websitebox" id="site107" style="display: inline;"><a href="https://www.edaboard.com/forum.php" target="_blank" class="websitelink" ><img src="images/4446479.gif" width="16" height="16" border="0"> edaboard forum RF, Microwave, Antennas and Optics - wireless, remote, modulator, mhz, amplifier</a> </span>
+            <span class="websitebox" id="site108" style="display: inline;"><a href="https://www.vcast.it/home/" target="_blank" class="websitelink" ><img src="images/4449472.gif" width="16" height="16" border="0"> Vcast - Il tuo nuovo Videoregistratore Personale Online dei programmi TV</a> </span>
+            <span class="websitebox" id="site109" style="display: inline;"><a href="https://nostarch.com/upcoming.htm" target="_blank" class="websitelink" ><img src="images/4462489.gif" width="16" height="16" border="0"> Upcoming Titles at a Glance | No Starch Press</a> </span>
+            <span class="websitebox" id="site110" style="display: inline;"><a href="http://derekmolloy.ie/" target="_blank" class="websitelink" ><img src="images/4467572.gif" width="16" height="16" border="0"> Derek Molloy Electronics</a> </span>
+            <span class="websitebox" id="site112" style="display: inline;"><a href="https://www.embeddedrelated.com/blogs.php" target="_blank" class="websitelink" ><img src="images/4494851.gif" width="16" height="16" border="0"> Embedded Systems Blogs</a> </span>
+            <span class="websitebox" id="site113" style="display: inline;"><a href="https://www.fpgarelated.com/blogs.php" target="_blank" class="websitelink" ><img src="images/4494852.gif" width="16" height="16" border="0"> FPGA Blogs</a> </span>
+            <span class="websitebox" id="site114" style="display: inline;"><a href="https://www.electronics-related.com/blogs.php" target="_blank" class="websitelink" ><img src="images/4494853.gif" width="16" height="16" border="0"> Electronics Blogs</a> </span>
+            <span class="websitebox" id="site115" style="display: inline;"><a href="https://www.dsprelated.com/blogs.php" target="_blank" class="websitelink" ><img src="images/4494854.gif" width="16" height="16" border="0"> Blogs DSP</a> </span>
+            <span class="websitebox" id="site116" style="display: inline;"><a href="https://onlybooks.org/" target="_blank" class="websitelink" ><img src="images/4503725.gif" width="16" height="16" border="0"> Only Books - Free eBooks Download</a> </span>
+            <span class="websitebox" id="site117" style="display: inline;"><a href="http://qrp-popcorn.blogspot.com/" target="_blank" class="websitelink" ><img src="images/4506767.gif" width="16" height="16" border="0"> QRP HomeBuilder - QRPHB</a> </span>
+            <span class="websitebox" id="site118" style="display: inline;"><a href="http://www.ebook3000.com/" target="_blank" class="websitelink" ><img src="images/4507393.gif" width="16" height="16" border="0"> Free eBooks Download - ebook3000.com</a> </span>
+            <span class="websitebox" id="site121" style="display: inline;"><a href="http://www.switchdoc.com/" target="_blank" class="websitelink" ><img src="images/4538161.gif" width="16" height="16" border="0"> SDL - SwitchDoc Labs</a> </span>
+            <span class="websitebox" id="site126" style="display: inline;"><a href="https://fathimashadiyya.wordpress.com/" target="_blank" class="websitelink" ><img src="images/4569622.gif" width="16" height="16" border="0"> Thoughts on Programming | all about my studies and experiments</a> </span>
+            <span class="websitebox" id="site128" style="display: inline;"><a href="https://www.tequipment.net/" target="_blank" class="websitelink" ><img src="images/4595425.gif" width="16" height="16" border="0"> TEquipment.NET Lowest Prices for Test Equipment | Huge Stock | Top Test Brands |</a> </span>
+            <span class="websitebox" id="site133" style="display: inline;"><a href="https://katodo.com/it/" target="_blank" class="websitelink" ><img src="images/4647924.gif" width="16" height="16" border="0"> Katodo.com Store - Katodo store</a> </span>
+            <span class="websitebox" id="site134" style="display: inline;"><a href="https://www.carminenoviello.com/it/" target="_blank" class="websitelink" ><img src="images/4648621.gif" width="16" height="16" border="0"> Carmine Noviello - Un blog semiserio su programmazione ed elettronica</a> </span>
+            <span class="websitebox" id="site135" style="display: inline;"><a href="http://build-its-inprogress.blogspot.com/" target="_blank" class="websitelink" ><img src="images/4649197.gif" width="16" height="16" border="0"> BuildIts in Progress</a> </span>
+            <span class="websitebox" id="site136" style="display: inline;"><a href="https://www.swharden.com/wp/" target="_blank" class="websitelink" ><img src="images/website-icons-md5/system/0.gif" width="16" height="16" border="0"> The personal website of Scott W Harden</a> </span>
+            <span class="websitebox" id="site137" style="display: inline;"><a href="https://www.critics-corporation.com/RaspberryPi/" target="_blank" class="websitelink" ><img src="images/4668757.gif" width="16" height="16" border="0"> critics-corporation</a> </span>
+            <span class="websitebox" id="site139" style="display: inline;"><a href="https://happilyembedded.wordpress.com/" target="_blank" class="websitelink" ><img src="images/4671328.gif" width="16" height="16" border="0"> happilyembedded</a> </span>
+            <span class="websitebox" id="site140" style="display: inline;"><a href="https://onlinedisassembler.com/static/home/" target="_blank" class="websitelink" ><img src="images/4671660.gif" width="16" height="16" border="0"> disassembler.io</a> </span>
+            <span class="websitebox" id="site142" style="display: inline;"><a href="http://www.informit.com/imprint/index.aspx?st=61085" target="_blank" class="websitelink" ><img src="images/4673439.gif" width="16" height="16" border="0"> Addison-Wesley Professional | InformIT</a> </span>
+            <span class="websitebox" id="site144" style="display: inline;"><a href="https://www.irdevelopers.com/Default.aspx" target="_blank" class="websitelink" ><img src="images/4696108.gif" width="16" height="16" border="0"> irDevelopers - Home Page</a> </span>
+            <span class="websitebox" id="site146" style="display: inline;"><a href="https://downloadly.ir/?s=iar" target="_blank" class="websitelink" ><img src="images/4696139.gif" width="16" height="16" border="0"> ??? ???? iar ????? ????? - ?????? ?????? ??? ?????</a> </span>
+            <span class="websitebox" id="site148" style="display: inline;"><a href="http://www.cplusplus.com/reference/" target="_blank" class="websitelink" ><img src="images/4703763.gif" width="16" height="16" border="0"> Reference - C++ Reference</a> </span>
+            <span class="websitebox" id="site149" style="display: inline;"><a href="https://pdfmagazines.online/"  target="_blank" class="websitelink" ><img src="images/4706912.gif" width="16" height="16" border="0"> PDF Magazines Online</a> </span>
+            <span class="websitebox" id="site151" style="display: inline;"><a href="http://www.mantaro.com/resources/impedance-calculator.htm" target="_blank" class="websitelink" ><img src="images/4710298.gif" width="16" height="16" border="0"> Impedance Calculators - Mantaro Networks Inc. Product Development Services</a> </span>
+            <span class="websitebox" id="site153" style="display: inline;"><a href="https://read-mag.com/" target="_blank" class="websitelink" ><img src="images/4717557.gif" width="16" height="16" border="0"> Read magazine online free PDF</a> </span>
+            <span class="websitebox" id="site156" style="display: inline;"><a href="https://clonezilla.org/clonezilla-live.php" target="_blank" class="websitelink" ><img src="images/4719119.gif" width="16" height="16" border="0"> Clonezilla live</a> </span>
+            <span class="websitebox" id="site157" style="display: inline;"><a href="https://magazinelib.com/"  target="_blank" class="websitelink" ><img src="images/4720429.gif" width="16" height="16" border="0"> Download PDF magazines and ebook free USA, UK, Australia and other</a> </span>
+            <span class="websitebox" id="site158" style="display: inline;"><a href="https://www.cafago.com/en/" target="_blank" class="websitelink" ><img src="images/4729789.gif" width="16" height="16" border="0"> Online Shopping for Cool Gadegets, RC Drones - Cafago.com</a> </span>
+            <span class="websitebox" id="site159" style="display: inline;"><a href="http://sa555.blogspot.com/"  target="_blank" class="websitelink" ><img src="images/4730640.gif" width="16" height="16" border="0"> LY3LP laboratory</a> </span>
+            <span class="websitebox" id="site160" style="display: inline;"><a href="https://www.rf-microwave.com/it/home/" target="_blank" class="websitelink"><img src="images/rfico.png" width="16" height="16" border="0"> Home | rf-microwave.com - Componenti elettronici per HF, RF e microonde</a> </span>
+            <span class="websitebox" id="site160" style="display: inline;"><a href="https://bytechlab.com/" target="_blank" class="websitelink"><img src="images/bytechlab.png" width="16" height="16" border="0"> bytechlab.com Electronics Blog</a> </span>
+
+
+
+            
+
+
+
+
+
+        </td>
+        </tr>
+        </tbody></table>
+        
+        </td>
+        <td valign="top" bgcolor="#ffffff" align="right">&nbsp;</td>
+        </tr>
+        
+        </tbody></table>
+        </div>
+        <br>
+        </td>
+        </tr>
+        </tbody></table>
+        <script language="javascript" type="text/javascript">
+        //<!--
+        // Display stuff for first ordered topic
+        displaysites(topicobjarr[0].tid, 0);
+        //-->
+        </script>
+        </td>
+
+
+
+
+
+
+
+        
+
+    <div class="body-wrapper">
+
+
+
+    </div>
+
+
+</body>
+</html>
