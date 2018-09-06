@@ -240,6 +240,21 @@
             margin: 5px 10px;
             padding: 0;           
         }
+
+
+
+    input[type=search] {
+    width:30em;
+    padding: 5px;
+    outline: none;
+    border: 2px solid #999999;
+    border-radius: 5px;
+    background-color: #FBFBFB;
+    font-family: Cambria, Cochin, Georgia, serif;
+    font-size: 16px;
+    margin: 1em;
+    }
+
     </style>
 
     <script>
@@ -265,7 +280,16 @@
         <tbody>
         <tr>
         <td valign="middle" height="50" align="center">
-        <div id="formboxid"><form method="get" action="" id="frmid"><span style="color: red; font-family: arial; font-size: 13pt; font-weight: bold;"><input size="42" maxlength="150" name="QUERY1" id="QUERY1" class="searchbox" value="" onkeypress="return noEnter(event);" type="text">&nbsp;&nbsp;</span></form></div>
+        <div id="formboxid">
+            <form method="get" action="http://www.google.com/search" id="frmid" autocomplete="off" target="_blank">
+                <span style="color: red; font-family: arial; font-size: 13pt; font-weight: bold;">
+                        <input type="search" id="mySearch" name="q">
+                        <button type="submit" value="search" style="background-color:transparent; border-color:transparent;"> 
+                                <img src="images/search.png" height="35" style="  position: relative; top: 15px; left: -15px;                               "/>
+                        </button>
+                </span>
+            </form>
+        </div>
         <div id="airfareformboxid" style="display:none;">
         </div>
         </td>
